@@ -2,7 +2,9 @@
 
 ## BasicBot for discord.py (rewrite)
 
-### Created by Hades#6871
+> ### Created by Hades#6871
+
+### Click below to begin the tutorial
 
 [![Click here to begin the tutorial](https://i1.wp.com/beebom.com/wp-content/uploads/2016/12/7-discord-bots-to-enhance-your-server.jpg?fit=700%2C400&ssl=1)](https://github.com/hades-99/BasicBotRewrite/wiki/Step-1)
 
