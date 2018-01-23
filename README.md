@@ -1,4 +1,4 @@
-# BasicBot for discord.py (rewrite)
+# BasicBot for discord.py [rewrite]
 
 > ### Created by Hades#6871
 
