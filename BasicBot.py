@@ -11,7 +11,7 @@ client = Bot(description = "BasicBot for rewrite created by Hades#6871", command
 @client.event
 async def on_ready():
     #This function sets the Playing status for your bot
-    await client.change_presence(game = discord.Game(name = "Enter the playing status for your bot"))
+    await client.change_presence(activity = discord.Game("Enter the playing status for your bot"))
     #The following lines print some information about your bot to the console
     print("=" * 40 + "\n")
     print("Logged in as: {}".format(client.user.name))
