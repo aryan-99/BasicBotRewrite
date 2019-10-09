@@ -5,13 +5,17 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import platform
 
+#different variables
+token = "INSERT TOKEN HERE"
+prefix = "PREFIX"
+
 #This line defines the client variable which will be used a lot in coding commands. Enter your bot's description and prefix within the quotes.
-client = Bot(description = "BasicBot for rewrite created by Hades#6871", command_prefix = "Enter prefix here")
+client = Bot(description="BasicBot for rewrite created by Hades#6871", command_prefix=prefix, case_insensitive=True)
 
 @client.event
 async def on_ready():
     #This function sets the Playing status for your bot
-    await client.change_presence(activity = discord.Game("Enter the playing status for your bot"))
+    await client.change_presence(activity = discord.Game("<playing status here>"))
     #The following lines print some information about your bot to the console
     print("=" * 40 + "\n")
     print("Logged in as: {}".format(client.user.name))
@@ -22,6 +26,8 @@ async def on_ready():
     print("Running Python version {}\n".format(platform.python_version()))
     print("Invite your bot: https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8\n".format(client.user.id))
     print("="  * 40)
+    #makes the help command go to dms by default
+    client.help_command=commands.DefaultHelpCommand(dm_help=True)
 
 #Basic ping command - if you type ping with your prefix, it'll respond
 @client.command()
@@ -29,4 +35,4 @@ async def ping(ctx):
     await ctx.send(":ping_pong: **Pong!**\nDon't forget to modify the BasicBot code!")
 
 #Every bot has a unique token - insert your bot's token within the quotation marks
-client.run("Enter bot token here")
+client.run(token, bot=True)
